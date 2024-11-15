@@ -100,7 +100,7 @@ const ProposalHipBlurb: FC<{ network: string }> = ({ network }) => (
       <Image alt={`ve${network}`} src={`/images/ve${network}.svg`} fill />
     </div>
     <p className="text-xs">
-      This HIP affects the {network.toUpperCase()} network which requires ve
+      This HIP affects the {network.toUpperCase() === "HNT" ? "Helium" : network.toUpperCase()} Network which requires ve
       {network.toUpperCase()} positions for vote participation.
     </p>
     <Link href={`/${network}/positions`} className="underline text-xs">
